@@ -29,6 +29,7 @@ var LoginForm = React.createClass({
     var signInPromise = firebase.auth().signInWithEmailAndPassword(email, pw)
     signInPromise.then(function () {
       console.log('User is on!')
+      console.log(firebase.auth().currentUser)
     }, function (error) {
       console.log(error)
     })
